@@ -18,6 +18,11 @@ I have started by algoriithms because this is the easy part and introduces funda
 
 also there are good refreshers for algorithms like on [freecodecamp blog](https://www.freecodecamp.org/news/introduction-to-algorithms-with-javascript-examples/) or by [bro code](https://www.youtube.com/watch?v=CBYHwZcbD-s), these are good as refreshers but not reliable, I you want a solid usefull tutorial there is one by [abdul-bary](https://www.youtube.com/watch?v=0IAPZzGSbME&pp=0gcJCfcAhR29_xXO) or [MIT](https://www.youtube.com/watch?v=JPyuH4qXLZ0)
 
+some topics are not mentioned here like
+
+- recursion by [mycodeschool](https://www.youtube.com/playlist?list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO)
+- basic math by [mycodeschool](https://www.youtube.com/playlist?list=PL2_aWCzGMAwLL-mEB4ef20f3iqWMGWa25)
+
 ## time complexity
 
 theere is not much to say here exccept refrencing the tutorial itself [
@@ -1310,3 +1315,1409 @@ There are n cities connected by some number of flights. You are given an array f
 You are given a graph where each edge has two weights: the first is the normal time, and the second is the second shortest time. You need to find the second minimum time to reach the destination. This problem requires an advanced understanding of Dijkstra's algorithm to handle multiple edge weights and find the second shortest path.
 
 ---
+
+# Data Structures
+
+![alt text](image-25.png)
+
+I love this part beacuse it is more realstic
+
+materials used here are
+
+- Data structures decode on [cloudnativebasecamp](https://cloudnativebasecamp.com/courses/ds01/)
+
+- Data structures by [mycodeshool](https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P)
+
+also very important topic which is understanding low -- not that low - level memory management using C by [mycodeshool](https://www.youtube.com/playlist?list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_)
+
+# Arrays
+
+![alt text](image-26.png)
+lecture link [Arrays-instroduction](https://cloudnativebasecamp.com/lessons/03-array-introduction/)
+
+![alt text](image-36.png)
+summary of data structures time complexity
+
+## Data Structure
+
+An array is a data structure that stores elements in a contiguous block of memory. Each element is accessed by its index, which starts from zero. Arrays provide fast access (`O(1)`) to elements using the index but have a fixed size, meaning you cannot change their length after creation (in lower-level languages). In TypeScript (and JavaScript), arrays are dynamic, meaning their size can grow or shrink.
+
+Arrays are widely used because of their simplicity and speed in random access. However, operations like insertion and deletion (except at the end) can be costly (`O(n)`), as elements may need to be shifted.
+
+Here is an example of array usage and manipulation in TypeScript:
+
+```typescript
+// Declare an array of numbers
+let numbers: number[] = [1, 2, 3, 4, 5];
+
+// Access element by index
+console.log(numbers[0]); // Output: 1
+
+// Add an element at the end
+numbers.push(6); // [1, 2, 3, 4, 5, 6]
+
+// Remove the last element
+numbers.pop(); // [1, 2, 3, 4, 5]
+
+// Insert at the beginning
+numbers.unshift(0); // [0, 1, 2, 3, 4, 5]
+
+// Remove from the beginning
+numbers.shift(); // [1, 2, 3, 4, 5]
+
+// Find index of an element
+let index = numbers.indexOf(3); // 2
+
+// Remove element by index
+if (index !== -1) {
+  numbers.splice(index, 1); // [1, 2, 4, 5]
+}
+
+// Loop through the array
+for (let num of numbers) {
+  console.log(num);
+}
+
+// Map example
+let squares = numbers.map((n) => n * n);
+console.log(squares); // [1, 4, 16, 25]
+```
+
+Arrays are the foundation for many algorithms and problems in coding interviews. Understanding indexing, slicing, and iteration is critical.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Two Sum](https://leetcode.com/problems/two-sum/)
+
+Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [3Sum](https://leetcode.com/problems/3sum/)
+
+Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`. The solution set must not contain duplicate triplets.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+
+Given an unsorted integer array `nums`, return the smallest missing positive integer. You must implement an algorithm that runs in `O(n)` time and uses constant extra space.
+
+---
+
+# Linked Lists
+
+![alt text](image-27.png)
+lecture link [Linked Lists](https://cloudnativebasecamp.com/lessons/05-linked-list-introduction-singly-list-implementation/)
+
+## Data Structure
+
+A linked list is a linear data structure where elements (called nodes) are stored in separate objects, and each node points to the next node in the sequence. Unlike arrays, linked lists do not store elements in contiguous memory locations. This makes insertion and deletion operations efficient (`O(1)` if you have the node reference) but makes accessing elements by index slower (`O(n)`).
+
+In TypeScript, a singly linked list can be implemented using classes:
+
+```typescript
+class ListNode {
+  val: number;
+  next: ListNode | null;
+
+  constructor(val?: number, next?: ListNode | null) {
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
+  }
+}
+
+// Create linked list: 1 -> 2 -> 3 -> null
+let node3 = new ListNode(3);
+let node2 = new ListNode(2, node3);
+let head = new ListNode(1, node2);
+
+// Traverse linked list
+let current: ListNode | null = head;
+while (current !== null) {
+  console.log(current.val);
+  current = current.next;
+}
+
+// Insert new node at the beginning: 0 -> 1 -> 2 -> 3 -> null
+let newHead = new ListNode(0, head);
+
+// Delete node (e.g., delete node 2)
+current = newHead;
+while (current.next !== null) {
+  if (current.next.val === 2) {
+    current.next = current.next.next; // Bypass node 2
+    break;
+  }
+  current = current.next;
+}
+```
+
+Linked lists come in several types: singly linked lists, doubly linked lists (where nodes point both forward and backward), and circular linked lists (where the tail node points back to the head).
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+
+Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each node contains a single digit. Add the two numbers and return the sum as a linked list.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+
+You are given an array of `k` linked-lists, each linked list is sorted in ascending order. Merge all the linked lists into one sorted linked list and return it.
+
+---
+
+# Array Based Stack
+
+lecture link [Array Based Stack](https://cloudnativebasecamp.com/lessons/11-stack-array-based-implementation-2/)
+
+## Data Structure
+
+A stack is a linear data structure that follows the Last In First Out (LIFO) principle. The last element added to the stack is the first one to be removed. In TypeScript, stacks are often implemented using arrays because arrays provide efficient `push` and `pop` operations at the end (`O(1)` time complexity).
+
+Stacks are commonly used in algorithms that involve recursion, parsing, backtracking, and checking balanced parentheses.
+
+Here is how you can implement and use a stack using an array in TypeScript:
+
+```typescript
+class Stack<T> {
+  private items: T[] = [];
+
+  // Push element onto the stack
+  push(element: T): void {
+    this.items.push(element);
+  }
+
+  // Pop element from the stack
+  pop(): T | undefined {
+    return this.items.pop();
+  }
+
+  // Peek at the top element
+  peek(): T | undefined {
+    return this.items[this.items.length - 1];
+  }
+
+  // Check if stack is empty
+  isEmpty(): boolean {
+    return this.items.length === 0;
+  }
+
+  // Get stack size
+  size(): number {
+    return this.items.length;
+  }
+}
+
+// Example usage
+let stack = new Stack<number>();
+stack.push(1);
+stack.push(2);
+stack.push(3);
+
+console.log(stack.pop()); // 3
+console.log(stack.peek()); // 2
+console.log(stack.isEmpty()); // false
+console.log(stack.size()); // 2
+```
+
+This array-based stack is simple, efficient, and practical for most problems that require LIFO behavior.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+
+Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['`, and `']'`, determine if the input string is valid. An input string is valid if open brackets are closed by the same type of brackets and in the correct order.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+
+Given an array of integers `temperatures` representing the daily temperatures, return an array `answer` such that `answer[i]` is the number of days you have to wait after the `i-th` day to get a warmer temperature. If there is no future day for which this is possible, put `0` instead.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+
+Given an array of integers `heights` representing the histogram's bar height where the width of each bar is `1`, return the area of the largest rectangle in the histogram.
+
+---
+
+# Linked List Based Stack
+
+![alt text](image-28.png)
+lecture link [Linked List Based Stack](https://cloudnativebasecamp.com/lessons/10-stack-linked-list-based-implementation/)
+
+## Data Structure
+
+A stack based on a linked list is a LIFO (Last In First Out) data structure where elements are stored in nodes, and each node points to the next one. Unlike array-based stacks, linked list stacks do not have a fixed size and can dynamically grow as needed without reallocating or shifting elements. The top of the stack is represented by the head of the linked list.
+
+This makes `push` and `pop` operations efficient, both in `O(1)` time.
+
+Here’s an example of implementing a stack using a singly linked list in TypeScript:
+
+```typescript
+class ListNode<T> {
+  val: T;
+  next: ListNode<T> | null;
+
+  constructor(val: T, next: ListNode<T> | null = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+class LinkedListStack<T> {
+  private head: ListNode<T> | null = null;
+  private length: number = 0;
+
+  // Push onto stack
+  push(val: T): void {
+    let newNode = new ListNode(val, this.head);
+    this.head = newNode;
+    this.length++;
+  }
+
+  // Pop from stack
+  pop(): T | null {
+    if (!this.head) return null;
+    let val = this.head.val;
+    this.head = this.head.next;
+    this.length--;
+    return val;
+  }
+
+  // Peek at the top element
+  peek(): T | null {
+    return this.head ? this.head.val : null;
+  }
+
+  // Check if stack is empty
+  isEmpty(): boolean {
+    return this.length === 0;
+  }
+
+  // Get stack size
+  size(): number {
+    return this.length;
+  }
+}
+
+// Example usage
+let stack = new LinkedListStack<number>();
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+console.log(stack.pop()); // 30
+console.log(stack.peek()); // 20
+console.log(stack.isEmpty()); // false
+console.log(stack.size()); // 2
+```
+
+This structure avoids resizing issues found in arrays and is ideal when you need predictable `O(1)` insertion and removal without worrying about internal capacity.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Implement Stack using Linked List](https://leetcode.com/problems/implement-stack-using-linked-list/)
+
+Design a stack using a singly linked list where you must support standard stack operations like `push`, `pop`, `top`, and `empty`.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/)
+
+Given the head of a linked list, remove every node that has a node with a greater value to its right. Return the modified linked list's head.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+
+Given a linked list, reverse the nodes of a linked list `k` at a time and return its modified list. `k` is a positive integer, and if the number of nodes is not a multiple of `k`, the remaining nodes should remain as is.
+
+---
+
+# Linked List Based Queue
+
+![alt text](image-29.png)
+lecture link [Linked List Based Queue](https://cloudnativebasecamp.com/lessons/12-queue-linked-list-based-implementation/)
+
+## Data Structure
+
+A queue based on a linked list is a FIFO (First In First Out) structure where elements are stored in nodes connected through pointers. Unlike an array-based queue, the linked list version avoids the `O(n)` cost of shifting elements during dequeue, as both enqueue and dequeue operations happen in constant `O(1)` time by managing front and rear pointers.
+
+Here’s an implementation in TypeScript using a singly linked list:
+
+```typescript
+class ListNode<T> {
+  val: T;
+  next: ListNode<T> | null;
+
+  constructor(val: T) {
+    this.val = val;
+    this.next = null;
+  }
+}
+
+class LinkedListQueue<T> {
+  private head: ListNode<T> | null = null;
+  private tail: ListNode<T> | null = null;
+  private length: number = 0;
+
+  // Enqueue element at the end
+  enqueue(val: T): void {
+    const newNode = new ListNode(val);
+    if (this.tail) {
+      this.tail.next = newNode;
+    }
+    this.tail = newNode;
+    if (!this.head) {
+      this.head = newNode;
+    }
+    this.length++;
+  }
+
+  // Dequeue element from the front
+  dequeue(): T | null {
+    if (!this.head) return null;
+    const val = this.head.val;
+    this.head = this.head.next;
+    if (!this.head) {
+      this.tail = null;
+    }
+    this.length--;
+    return val;
+  }
+
+  // Peek at the front element
+  peek(): T | null {
+    return this.head ? this.head.val : null;
+  }
+
+  // Check if queue is empty
+  isEmpty(): boolean {
+    return this.length === 0;
+  }
+
+  // Get queue size
+  size(): number {
+    return this.length;
+  }
+}
+
+// Example usage
+let queue = new LinkedListQueue<number>();
+queue.enqueue(5);
+queue.enqueue(10);
+queue.enqueue(15);
+
+console.log(queue.dequeue()); // 5
+console.log(queue.peek()); // 10
+console.log(queue.isEmpty()); // false
+console.log(queue.size()); // 2
+```
+
+This structure is ideal when you require dynamic size and efficient enqueue/dequeue operations, particularly in scenarios like task scheduling or level-order traversal of trees.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)
+
+Design your implementation of a circular queue. A circular queue is a linear data structure where the operations are performed based on FIFO and the last position is connected back to the first position to make a circle.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Design Front Middle Back Queue](https://leetcode.com/problems/design-front-middle-back-queue/)
+
+Design a queue that supports adding and removing elements from the front, middle, and back. All operations should be efficient, and you may use linked list concepts to manage dynamic insertions.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Maximum Performance of a Team](https://leetcode.com/problems/maximum-performance-of-a-team/)
+
+You are given scores and speeds of engineers and must form a team with the maximum performance under certain constraints. The problem involves maintaining a dynamic group of selected engineers, which can be effectively modeled with a queue or heap structure.
+
+---
+
+# Array Based Queue
+
+lecture link [Array Based Queue]() !it is not present
+
+## Data Structure
+
+A queue is a linear data structure that follows the First In First Out (FIFO) principle. The first element added to the queue will be the first one removed. In TypeScript, queues can be implemented using arrays by using the `push` method to enqueue and the `shift` method to dequeue. However, frequent use of `shift` can be inefficient (`O(n)`), so for better performance in production, you would use a circular buffer or a double-ended queue (deque).
+
+Here is a simple and clear array-based queue implementation in TypeScript:
+
+```typescript
+class Queue<T> {
+  private items: T[] = [];
+
+  // Enqueue element at the end
+  enqueue(element: T): void {
+    this.items.push(element);
+  }
+
+  // Dequeue element from the front
+  dequeue(): T | undefined {
+    return this.items.shift();
+  }
+
+  // Peek at the front element
+  peek(): T | undefined {
+    return this.items[0];
+  }
+
+  // Check if queue is empty
+  isEmpty(): boolean {
+    return this.items.length === 0;
+  }
+
+  // Get queue size
+  size(): number {
+    return this.items.length;
+  }
+}
+
+// Example usage
+let queue = new Queue<number>();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+
+console.log(queue.dequeue()); // 1
+console.log(queue.peek()); // 2
+console.log(queue.isEmpty()); // false
+console.log(queue.size()); // 2
+```
+
+This structure is practical and works well for most algorithm problems, especially those involving level-order traversal or scheduling.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+
+Implement a first in first out (FIFO) queue using only two stacks. Your implemented queue should support all standard queue operations (`push`, `pop`, `peek`, and `empty`).
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/)
+
+You have a queue of incoming calls. Implement a system that counts the number of calls that happened in the past 3000 milliseconds, maintaining the FIFO nature of incoming events.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+
+Given an array `nums` and a sliding window size `k`, return the maximum value in each sliding window of size `k`. This requires an efficient solution that avoids recomputing maximums from scratch for each window.
+
+---
+
+# Key Value Pair Dictionary
+
+![alt text](image-30.png)
+lecture link [Key Value Pair Dictionary](https://cloudnativebasecamp.com/lessons/13-keyvaluepair-dictionary-implementation/)
+
+## Data Structure
+
+A key-value pair dictionary, commonly called a hashmap or object in TypeScript, is a data structure that stores data in pairs where every key is unique and maps to a corresponding value. Lookup, insertion, and deletion operations generally run in `O(1)` time on average, which makes dictionaries extremely powerful for solving problems involving counting, lookup tables, or grouping.
+
+TypeScript’s `Record`, `Map`, or plain objects can be used for this. Here is an example using a `Map` for type safety and consistency:
+
+```typescript
+class Dictionary<K, V> {
+  private items: Map<K, V>;
+
+  constructor() {
+    this.items = new Map<K, V>();
+  }
+
+  // Add or update key-value pair
+  set(key: K, value: V): void {
+    this.items.set(key, value);
+  }
+
+  // Get value by key
+  get(key: K): V | undefined {
+    return this.items.get(key);
+  }
+
+  // Check if key exists
+  has(key: K): boolean {
+    return this.items.has(key);
+  }
+
+  // Remove key-value pair
+  delete(key: K): boolean {
+    return this.items.delete(key);
+  }
+
+  // Get size
+  size(): number {
+    return this.items.size;
+  }
+
+  // Clear all entries
+  clear(): void {
+    this.items.clear();
+  }
+}
+
+// Example usage
+let dict = new Dictionary<string, number>();
+dict.set("apple", 5);
+dict.set("banana", 10);
+
+console.log(dict.get("apple")); // 5
+console.log(dict.has("banana")); // true
+console.log(dict.size()); // 2
+dict.delete("apple");
+console.log(dict.get("apple")); // undefined
+```
+
+This structure is especially effective when you need fast lookups or need to count frequencies, check duplicates, or implement caching.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Two Sum](https://leetcode.com/problems/two-sum/)
+
+Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to the target. You must solve it in `O(n)` using a dictionary for fast lookups.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+
+Given an array of integers `nums` and an integer `k`, return the total number of continuous subarrays whose sum equals to `k`. A hashmap is used to track cumulative sums efficiently.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)
+
+Given a list of unique words, find all pairs of distinct indices such that the concatenation of the two words forms a palindrome. A hashmap is used to check reversed strings in `O(1)` time.
+
+---
+
+# Hash Table
+
+![alt text](image-31.png)
+lecture link [Hash Table](https://cloudnativebasecamp.com/lessons/15-hash-table-introduction/)
+
+## Data Structure
+
+A hash table is a data structure that maps keys to values for efficient lookup. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. Hash tables offer average-case constant time complexity `O(1)` for lookups, insertions, and deletions, making them ideal for scenarios requiring fast access to data.
+
+In TypeScript, a hash table can be implemented using the built-in `Map` object, which preserves the insertion order of keys and allows any type of key.
+
+```typescript
+class HashTable<K, V> {
+  private table: Map<K, V>;
+
+  constructor() {
+    this.table = new Map<K, V>();
+  }
+
+  // Insert or update a key-value pair
+  set(key: K, value: V): void {
+    this.table.set(key, value);
+  }
+
+  // Retrieve a value by key
+  get(key: K): V | undefined {
+    return this.table.get(key);
+  }
+
+  // Check if a key exists
+  has(key: K): boolean {
+    return this.table.has(key);
+  }
+
+  // Remove a key-value pair
+  delete(key: K): boolean {
+    return this.table.delete(key);
+  }
+
+  // Get the number of key-value pairs
+  size(): number {
+    return this.table.size;
+  }
+
+  // Clear all key-value pairs
+  clear(): void {
+    this.table.clear();
+  }
+}
+
+// Example usage
+let ht = new HashTable<string, number>();
+ht.set("apple", 5);
+ht.set("banana", 10);
+
+console.log(ht.get("apple")); // 5
+console.log(ht.has("banana")); // true
+console.log(ht.size()); // 2
+ht.delete("apple");
+console.log(ht.get("apple")); // undefined
+```
+
+This implementation provides an efficient way to store and retrieve key-value pairs, making it suitable for various applications such as caching, counting frequencies, and implementing associative arrays.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Two Sum](https://leetcode.com/problems/two-sum/description/)
+
+Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+
+Given an array of integers `nums` and an integer `k`, return the total number of continuous subarrays whose sum equals to `k`. A subarray is a contiguous non-empty sequence of elements within an array.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/description/)
+
+You are given an array of unique words. A palindrome pair is a pair of integers `(i, j)` such that:
+
+- `0 <= i, j < words.length`,
+- `i != j`, and
+- `words[i] + words[j]` (the concatenation of the two strings) is a palindrome.
+
+Return an array of all the palindrome pairs of words. You must write an algorithm with `O(sum of words[i].length)` runtime complexity.
+
+# Binary Search Tree
+
+![alt text](image-32.png)
+lecture link [Binary Search Tree](https://cloudnativebasecamp.com/lessons/19-binary-search-tree-introduction-inset-find/)
+
+## Data Structure
+
+A Binary Search Tree (BST) is a type of binary tree where each node has at most two children, referred to as the left and right child. The key property of a BST is that for every node:
+
+- All elements in the left subtree are less than the node's value.
+- All elements in the right subtree are greater than the node's value.
+
+This property allows for efficient searching, insertion, and deletion operations, typically in O(log n) time, assuming the tree is balanced. However, in the case of an unbalanced BST, these operations can degrade to O(n) time.
+
+Here's an implementation of a simple BST in TypeScript:
+
+```typescript
+class TreeNode {
+  value: number;
+  left: TreeNode | null;
+  right: TreeNode | null;
+
+  constructor(value: number) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class BinarySearchTree {
+  root: TreeNode | null;
+
+  constructor() {
+    this.root = null;
+  }
+
+  insert(value: number): void {
+    const newNode = new TreeNode(value);
+    if (this.root === null) {
+      this.root = newNode;
+      return;
+    }
+    let currentNode = this.root;
+    while (true) {
+      if (value < currentNode.value) {
+        if (currentNode.left === null) {
+          currentNode.left = newNode;
+          return;
+        }
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        if (currentNode.right === null) {
+          currentNode.right = newNode;
+          return;
+        }
+        currentNode = currentNode.right;
+      } else {
+        return; // Duplicate values are not allowed
+      }
+    }
+  }
+
+  search(value: number): boolean {
+    let currentNode = this.root;
+    while (currentNode !== null) {
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else {
+        return true; // Value found
+      }
+    }
+    return false; // Value not found
+  }
+
+  inorderTraversal(node: TreeNode | null = this.root): number[] {
+    if (node === null) {
+      return [];
+    }
+    return [
+      ...this.inorderTraversal(node.left),
+      node.value,
+      ...this.inorderTraversal(node.right),
+    ];
+  }
+}
+
+// Example usage
+const bst = new BinarySearchTree();
+bst.insert(50);
+bst.insert(30);
+bst.insert(70);
+bst.insert(20);
+bst.insert(40);
+bst.insert(60);
+bst.insert(80);
+
+console.log(bst.inorderTraversal()); // Output: [20, 30, 40, 50, 60, 70, 80]
+console.log(bst.search(25)); // Output: false
+console.log(bst.search(60)); // Output: true
+```
+
+This implementation provides basic methods for inserting values, searching for values, and performing an in-order traversal to retrieve values in sorted order.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/)
+
+Given the root of a binary search tree (BST) with duplicates, return all the mode(s) (i.e., the most frequently occurred element) in it. If the tree has more than one mode, return them in any order.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+
+Given the root of a binary tree, determine if it is a valid binary search tree (BST). A valid BST is defined as follows:
+
+- The left subtree of a node contains only nodes with keys less than the node's key.
+- The right subtree of a node contains only nodes with keys greater than the node's key.
+- Both the left and right subtrees must also be binary search trees.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+
+Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST. According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+
+# Binary Search Tree (Balanced)
+
+![alt text](image-33.png)
+lecture link [Binary Search Tree (Balanced)](https://cloudnativebasecamp.com/lessons/21-binary-search-tree-balance/)
+
+## Data Structure
+
+A balanced binary search tree (BST) maintains the properties of a standard BST while ensuring that the tree remains balanced. This means that for every node, the height difference between its left and right subtrees is at most one. This balance ensures that operations like insertion, deletion, and search can be performed in O(log n) time, where n is the number of nodes in the tree.
+
+One common type of balanced BST is the AVL tree, which automatically balances itself during insertions and deletions through rotations.
+
+Here's an implementation of a balanced BST (AVL Tree) in TypeScript:
+
+```typescript
+class TreeNode {
+  value: number;
+  left: TreeNode | null = null;
+  right: TreeNode | null = null;
+  height: number = 1;
+
+  constructor(value: number) {
+    this.value = value;
+  }
+}
+
+class AVLTree {
+  root: TreeNode | null = null;
+
+  // Right rotate
+  private rightRotate(y: TreeNode): TreeNode {
+    let x = y.left!;
+    let T2 = x.right;
+
+    x.right = y;
+    y.left = T2;
+
+    y.height = Math.max(this.getHeight(y.left), this.getHeight(y.right)) + 1;
+    x.height = Math.max(this.getHeight(x.left), this.getHeight(x.right)) + 1;
+
+    return x;
+  }
+
+  // Left rotate
+  private leftRotate(x: TreeNode): TreeNode {
+    let y = x.right!;
+    let T2 = y.left;
+
+    y.left = x;
+    x.right = T2;
+
+    x.height = Math.max(this.getHeight(x.left), this.getHeight(x.right)) + 1;
+    y.height = Math.max(this.getHeight(y.left), this.getHeight(y.right)) + 1;
+
+    return y;
+  }
+
+  // Get height of node
+  private getHeight(node: TreeNode | null): number {
+    return node ? node.height : 0;
+  }
+
+  // Get balance factor of node
+  private getBalance(node: TreeNode | null): number {
+    return node ? this.getHeight(node.left) - this.getHeight(node.right) : 0;
+  }
+
+  // Insert a node
+  insert(value: number): void {
+    const insertNode = (node: TreeNode | null, value: number): TreeNode => {
+      if (!node) return new TreeNode(value);
+
+      if (value < node.value) {
+        node.left = insertNode(node.left, value);
+      } else if (value > node.value) {
+        node.right = insertNode(node.right, value);
+      } else {
+        return node; // Duplicate values are not allowed
+      }
+
+      node.height =
+        Math.max(this.getHeight(node.left), this.getHeight(node.right)) + 1;
+
+      const balance = this.getBalance(node);
+
+      if (balance > 1 && value < node.left!.value) {
+        return this.rightRotate(node);
+      }
+
+      if (balance < -1 && value > node.right!.value) {
+        return this.leftRotate(node);
+      }
+
+      if (balance > 1 && value > node.left!.value) {
+        node.left = this.leftRotate(node.left!);
+        return this.rightRotate(node);
+      }
+
+      if (balance < -1 && value < node.right!.value) {
+        node.right = this.rightRotate(node.right!);
+        return this.leftRotate(node);
+      }
+
+      return node;
+    };
+
+    this.root = insertNode(this.root, value);
+  }
+
+  // In-order traversal
+  inorderTraversal(): number[] {
+    const traverse = (node: TreeNode | null): number[] => {
+      if (!node) return [];
+      return [...traverse(node.left), node.value, ...traverse(node.right)];
+    };
+    return traverse(this.root);
+  }
+}
+
+// Example usage
+const avl = new AVLTree();
+avl.insert(10);
+avl.insert(20);
+avl.insert(30);
+avl.insert(25);
+avl.insert(5);
+
+console.log(avl.inorderTraversal()); // Output: [5, 10, 20, 25, 30]
+```
+
+This implementation ensures that the tree remains balanced after each insertion, providing efficient operations.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+
+Given a binary tree, determine if it is height-balanced. A height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differs by more than one.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/)
+
+Given the root of a binary search tree, return a balanced binary search tree with the same node values. If there is more than one answer, return any of them.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
+
+Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height-balanced binary search tree.
+
+# Heap
+
+![alt text](image-34.png)
+lecture link [Heap](https://cloudnativebasecamp.com/lessons/22-heap-implementation/)
+
+## Data Structure
+
+A heap is a specialized tree-based data structure that satisfies the heap property. It is a complete binary tree, meaning all levels are fully filled except possibly for the last level, which is filled from left to right. There are two main types of heaps:
+
+- **Min-Heap**: The value of the root node is less than or equal to the values of its children, and the same property is recursively applied to all subtrees.
+- **Max-Heap**: The value of the root node is greater than or equal to the values of its children, and the same property is recursively applied to all subtrees.
+
+Heaps are commonly implemented using arrays, where for a node at index `i`:
+
+- The left child is at index `2i + 1`
+- The right child is at index `2i + 2`
+- The parent is at index `(i - 1) / 2`
+
+Here's an implementation of a Min-Heap in TypeScript:
+
+```typescript
+class MinHeap {
+  private data: number[];
+
+  constructor() {
+    this.data = [];
+  }
+
+  private getLeftChildIndex(parentIndex: number): number {
+    return 2 * parentIndex + 1;
+  }
+
+  private getRightChildIndex(parentIndex: number): number {
+    return 2 * parentIndex + 2;
+  }
+
+  private getParentIndex(childIndex: number): number {
+    return Math.floor((childIndex - 1) / 2);
+  }
+
+  private hasLeftChild(index: number): boolean {
+    return this.getLeftChildIndex(index) < this.data.length;
+  }
+
+  private hasRightChild(index: number): boolean {
+    return this.getRightChildIndex(index) < this.data.length;
+  }
+
+  private hasParent(index: number): boolean {
+    return this.getParentIndex(index) >= 0;
+  }
+
+  private leftChild(index: number): number {
+    return this.data[this.getLeftChildIndex(index)];
+  }
+
+  private rightChild(index: number): number {
+    return this.data[this.getRightChildIndex(index)];
+  }
+
+  private parent(index: number): number {
+    return this.data[this.getParentIndex(index)];
+  }
+
+  private swap(indexOne: number, indexTwo: number): void {
+    const temp = this.data[indexOne];
+    this.data[indexOne] = this.data[indexTwo];
+    this.data[indexTwo] = temp;
+  }
+
+  private heapifyUp(): void {
+    let index = this.data.length - 1;
+    while (this.hasParent(index) && this.parent(index) > this.data[index]) {
+      this.swap(this.getParentIndex(index), index);
+      index = this.getParentIndex(index);
+    }
+  }
+
+  private heapifyDown(): void {
+    let index = 0;
+    while (this.hasLeftChild(index)) {
+      let smallerChildIndex = this.getLeftChildIndex(index);
+      if (
+        this.hasRightChild(index) &&
+        this.rightChild(index) < this.leftChild(index)
+      ) {
+        smallerChildIndex = this.getRightChildIndex(index);
+      }
+
+      if (this.data[index] < this.data[smallerChildIndex]) {
+        break;
+      } else {
+        this.swap(index, smallerChildIndex);
+      }
+      index = smallerChildIndex;
+    }
+  }
+
+  insert(value: number): void {
+    this.data.push(value);
+    this.heapifyUp();
+  }
+
+  remove(): number | null {
+    if (this.data.length === 0) {
+      return null;
+    }
+    const root = this.data[0];
+    this.data[0] = this.data[this.data.length - 1];
+    this.data.pop();
+    this.heapifyDown();
+    return root;
+  }
+
+  peek(): number | null {
+    return this.data.length > 0 ? this.data[0] : null;
+  }
+}
+
+// Example usage
+const minHeap = new MinHeap();
+minHeap.insert(10);
+minHeap.insert(20);
+minHeap.insert(5);
+minHeap.insert(30);
+
+console.log(minHeap.peek()); // Output: 5
+console.log(minHeap.remove()); // Output: 5
+console.log(minHeap.peek()); // Output: 10
+```
+
+This implementation provides methods to insert elements, remove the root element, and peek at the root element, all while maintaining the heap property.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
+
+We have a collection of stones, each with a positive integer weight. Each turn, we choose the two heaviest stones and smash them together. If the stones are of equal weight, both are destroyed; if the stones have different weights, the smaller stone is destroyed, and the larger stone's weight is reduced by the smaller stone's weight. Return the weight of the last remaining stone or 0 if there are no stones left.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
+Given an integer array `nums` and an integer `k`, return the kth largest element in the array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+
+The problem is to design a data structure that supports the following two operations:
+
+- `insertNum(int num)`: Inserts the integer `num` from the data stream.
+- `findMedian()`: Returns the median of all elements inserted so far.
+
+Implement the `MedianFinder` class:
+
+```typescript
+class MedianFinder {
+  constructor();
+  insertNum(num: number): void;
+  findMedian(): number;
+}
+```
+
+# Priority Queue
+
+![alt text](image-35.png)
+lecture link [Priority Queue](https://cloudnativebasecamp.com/lessons/23-priorityqueue/)
+
+## Data Structure
+
+A priority queue is an abstract data type that extends the functionality of a regular queue by associating a priority with each element. In a standard queue, elements are dequeued in the order they were enqueued (First In, First Out - FIFO). In contrast, a priority queue dequeues elements based on their priority, with the highest (or lowest) priority elements dequeued first, regardless of their order in the queue.
+
+Priority queues are typically implemented using heaps, which are complete binary trees that maintain the heap property:
+
+- **Max-Heap**: The value of each node is greater than or equal to the values of its children, ensuring that the maximum element is at the root.
+- **Min-Heap**: The value of each node is less than or equal to the values of its children, ensuring that the minimum element is at the root.
+
+These implementations allow for efficient insertion and removal operations, both of which can be performed in O(log n) time.
+
+Here's an example of a priority queue implementation in TypeScript using a max-heap:
+
+```typescript
+class MaxHeap {
+  private heap: number[] = [];
+
+  private parent(index: number): number {
+    return Math.floor((index - 1) / 2);
+  }
+
+  private leftChild(index: number): number {
+    return 2 * index + 1;
+  }
+
+  private rightChild(index: number): number {
+    return 2 * index + 2;
+  }
+
+  private heapifyUp(index: number): void {
+    while (index > 0 && this.heap[this.parent(index)] < this.heap[index]) {
+      [this.heap[this.parent(index)], this.heap[index]] = [
+        this.heap[index],
+        this.heap[this.parent(index)],
+      ];
+      index = this.parent(index);
+    }
+  }
+
+  private heapifyDown(index: number): void {
+    let largest = index;
+    const left = this.leftChild(index);
+    const right = this.rightChild(index);
+
+    if (left < this.heap.length && this.heap[left] > this.heap[largest]) {
+      largest = left;
+    }
+
+    if (right < this.heap.length && this.heap[right] > this.heap[largest]) {
+      largest = right;
+    }
+
+    if (largest !== index) {
+      [this.heap[index], this.heap[largest]] = [
+        this.heap[largest],
+        this.heap[index],
+      ];
+      this.heapifyDown(largest);
+    }
+  }
+
+  insert(value: number): void {
+    this.heap.push(value);
+    this.heapifyUp(this.heap.length - 1);
+  }
+
+  remove(): number | null {
+    if (this.heap.length === 0) return null;
+    const max = this.heap[0];
+    this.heap[0] = this.heap.pop()!;
+    this.heapifyDown(0);
+    return max;
+  }
+
+  peek(): number | null {
+    return this.heap.length > 0 ? this.heap[0] : null;
+  }
+}
+
+// Example usage
+const pq = new MaxHeap();
+pq.insert(10);
+pq.insert(20);
+pq.insert(5);
+console.log(pq.peek()); // Output: 20
+console.log(pq.remove()); // Output: 20
+console.log(pq.peek()); // Output: 10
+```
+
+In this implementation, the `insert` method adds a new element to the heap, and the `remove` method removes and returns the element with the highest priority (the root of the heap).
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
+
+We have a collection of stones, each with a positive integer weight. Each turn, we choose the two heaviest stones and smash them together. If the stones are of equal weight, both are destroyed; if the stones have different weights, the smaller stone is destroyed, and the larger stone's weight is reduced by the smaller stone's weight. Return the weight of the last remaining stone or 0 if there are no stones left.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+
+Given a non-empty array of integers, return the k most frequent elements. Your answer should be sorted by frequency from highest to lowest. If two elements have the same frequency, sort them in descending order.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+
+The problem is to design a data structure that supports the following two operations:
+
+- `insertNum(int num)`: Inserts the integer `num` from the data stream.
+- `findMedian()`: Returns the median of all elements inserted so far.
+
+Implement the `MedianFinder` class:
+
+```typescript
+class MedianFinder {
+  constructor();
+  insertNum(num: number): void;
+  findMedian(): number;
+}
+```
+
+# AVL Tree
+
+avl tree is not mentioned in the course but wirth mentioning
+
+## Data Structure
+
+An AVL tree is a self-balancing binary search tree (BST) where the difference in heights between the left and right subtrees of any node is at most one. This balance factor ensures that the tree remains balanced, preventing it from degenerating into a linear structure, which could lead to inefficient operations.
+
+### Properties
+
+- **Balance Factor**: For any node, the balance factor is calculated as the height of the left subtree minus the height of the right subtree. The balance factor must be -1, 0, or 1 for all nodes.
+
+- **Rotations**: To maintain balance after insertions or deletions, AVL trees perform rotations:
+
+  - **Left Rotation (LL Rotation)**: Applied when the left subtree is taller.
+  - **Right Rotation (RR Rotation)**: Applied when the right subtree is taller.
+  - **Left-Right Rotation (LR Rotation)**: A combination of left and right rotations.
+  - **Right-Left Rotation (RL Rotation)**: A combination of right and left rotations.
+
+### TypeScript Implementation
+
+```typescript
+class AVLNode {
+  value: number;
+  left: AVLNode | null = null;
+  right: AVLNode | null = null;
+  height: number = 1;
+
+  constructor(value: number) {
+    this.value = value;
+  }
+}
+
+class AVLTree {
+  root: AVLNode | null = null;
+
+  private getHeight(node: AVLNode | null): number {
+    return node ? node.height : 0;
+  }
+
+  private getBalanceFactor(node: AVLNode | null): number {
+    return node ? this.getHeight(node.left) - this.getHeight(node.right) : 0;
+  }
+
+  private leftRotate(z: AVLNode): AVLNode {
+    let y = z.right!;
+    let T2 = y.left;
+
+    y.left = z;
+    z.right = T2;
+
+    z.height = Math.max(this.getHeight(z.left), this.getHeight(z.right)) + 1;
+    y.height = Math.max(this.getHeight(y.left), this.getHeight(y.right)) + 1;
+
+    return y;
+  }
+
+  private rightRotate(y: AVLNode): AVLNode {
+    let x = y.left!;
+    let T2 = x.right;
+
+    x.right = y;
+    y.left = T2;
+
+    y.height = Math.max(this.getHeight(y.left), this.getHeight(y.right)) + 1;
+    x.height = Math.max(this.getHeight(x.left), this.getHeight(x.right)) + 1;
+
+    return x;
+  }
+
+  private insertNode(node: AVLNode | null, value: number): AVLNode {
+    if (!node) return new AVLNode(value);
+
+    if (value < node.value) {
+      node.left = this.insertNode(node.left, value);
+    } else if (value > node.value) {
+      node.right = this.insertNode(node.right, value);
+    } else {
+      return node; // Duplicate values are not allowed
+    }
+
+    node.height =
+      1 + Math.max(this.getHeight(node.left), this.getHeight(node.right));
+
+    let balance = this.getBalanceFactor(node);
+
+    if (balance > 1 && value < node.left!.value) {
+      return this.rightRotate(node);
+    }
+
+    if (balance < -1 && value > node.right!.value) {
+      return this.leftRotate(node);
+    }
+
+    if (balance > 1 && value > node.left!.value) {
+      node.left = this.leftRotate(node.left!);
+      return this.rightRotate(node);
+    }
+
+    if (balance < -1 && value < node.right!.value) {
+      node.right = this.rightRotate(node.right!);
+      return this.leftRotate(node);
+    }
+
+    return node;
+  }
+
+  insert(value: number): void {
+    this.root = this.insertNode(this.root, value);
+  }
+
+  inorderTraversal(node: AVLNode | null): void {
+    if (node) {
+      this.inorderTraversal(node.left);
+      console.log(node.value);
+      this.inorderTraversal(node.right);
+    }
+  }
+}
+
+// Example usage
+const avlTree = new AVLTree();
+avlTree.insert(10);
+avlTree.insert(20);
+avlTree.insert(30);
+avlTree.insert(25);
+avlTree.insert(5);
+
+console.log("Inorder traversal of AVL tree:");
+avlTree.inorderTraversal(avlTree.root);
+```
+
+This implementation provides methods for inserting nodes while maintaining the AVL tree properties and performing an inorder traversal to display the tree's contents.
+
+## Problems
+
+- \_ <p style="color: green; display: inline;">easy</p> [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
+
+Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height-balanced binary search tree.
+
+---
+
+- \_ <p style="color: orange; display: inline;">medium</p> [Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/)
+
+Given the root of a binary search tree, return a balanced binary search tree with the same node values. If there is more than one answer, return any of them.
+
+---
+
+- \_ <p style="color: red; display: inline;">hard</p> [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+
+Given an integer array nums, return an integer array counts where counts\[i] is the number of smaller elements to the right of nums\[i]. Implement this using a self-balancing binary search tree (AVL tree) for efficient querying.
+
+# THE END
+
+im glad to finish this thing and I hope I solve all the problems here
+
+**If you reach this point; you are a hero**
+
+for further updates this is my [linkedin](https://www.linkedin.com/in/kareem-anees-0496b62b3/)
+
+![alt text](image-37.png)
