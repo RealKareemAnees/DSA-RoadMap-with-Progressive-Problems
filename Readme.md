@@ -1,5 +1,7 @@
 # Data Structures and Algorithms Roadmap with Practical Progressive Problems
 
+![alt text](image-39.png)
+
 I have designed this roamap for people -- _like me_ - who want to re/learn DSA the Right way with practicing reall leetcode problems
 
 in this roadmap I will be following the [cloud native base camp](https://https://cloudnativebasecamp.com/) tutorial's arrangement of topics
@@ -75,19 +77,19 @@ This implementation sorts the array in place and returns the sorted array. It us
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)
+- **[easy]** [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)
 
 Given an integer array `nums`, move all the even integers at the beginning of the array followed by all the odd integers. You may return any array that satisfies this condition. This is simple and can be solved using insertion sort logic by separating even and odd numbers while iterating.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Sort Colors](https://leetcode.com/problems/sort-colors/)
+- **[meduim]** [Sort Colors](https://leetcode.com/problems/sort-colors/)
 
 Given an array `nums` with `n` objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue. This is essentially a variant of insertion sort, often called the Dutch National Flag problem.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
+- **[hard]** [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
 
 Given an integer array `nums`, return the number of reverse pairs in the array. A reverse pair is a pair `(i, j)` where `0 <= i < j < nums.length` and `nums[i] > 2 * nums[j]`. This is much harder because it requires modified merge sort or efficient insertion sort techniques to avoid TLE on large arrays.
 
@@ -165,19 +167,19 @@ This implementation divides the array into smaller subarrays, recursively sorts 
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+- **[easy]** [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
 Given two sorted integer arrays `nums1` and `nums2`, merge them into a single sorted array. The merged array should be stored in `nums1` without returning anything. This problem is straightforward and can be solved using the merge step of the merge sort algorithm.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Sort an Array](https://leetcode.com/problems/sort-an-array/)
+- **[meduim]** [Sort an Array](https://leetcode.com/problems/sort-an-array/)
 
 Given an array of integers, sort the array in ascending order and return it. You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible. This problem can be efficiently solved using merge sort.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+- **[hard]** [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 
 You are given an array of k linked-lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it. This problem requires a more advanced application of merge sort, utilizing a priority queue or a divide-and-conquer approach.
 
@@ -238,19 +240,19 @@ In this implementation, `left` and `right` track the current search boundaries. 
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Binary Search](https://leetcode.com/problems/binary-search/)
+- **[easy]** [Binary Search](https://leetcode.com/problems/binary-search/)
 
 Given a sorted array of integers `nums` and a target value `target`, implement a function to search for `target` in `nums`. If `target` exists, return its index; otherwise, return -1. The solution must have a time complexity of O(log n).
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+- **[meduim]** [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
 Suppose an array of length `n` sorted in ascending order is rotated between 1 and `n` times. Given the rotated sorted array `nums` and an integer `target`, return the index of `target` if it exists in the array; otherwise, return -1. You must solve it in O(log n) time complexity.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+- **[hard]** [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
 Given two sorted arrays `nums1` and `nums2` of size m and n respectively, find the median of the two sorted arrays. The solution should be implemented in O(log(min(m, n))) time complexity.
 
@@ -311,19 +313,19 @@ This algorithm uses two pointers: one starting from the left (for negative numbe
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/)
+- **[easy]** [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/)
 
 Given an integer array `nums` of even length consisting of an equal number of positive and negative integers, rearrange the array such that every consecutive pair of integers have opposite signs, while preserving the relative order of elements with the same sign.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Maximum Count of Positive Integer and Negative Integer](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/)
+- **[meduim]** [Maximum Count of Positive Integer and Negative Integer](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/)
 
 Given a sorted array `nums`, return the maximum between the number of positive integers and the number of negative integers. Note that 0 is neither positive nor negative.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+- **[hard]** [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
 
 Given an unsorted integer array `nums`, find the smallest missing positive integer. You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space.
 
@@ -409,19 +411,19 @@ This implementation sorts the activities by end time and then iterates through t
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Assign Cookies](https://leetcode.com/problems/assign-cookies/)
+- **[easy]** [Assign Cookies](https://leetcode.com/problems/assign-cookies/)
 
 Given an array `g` representing the greed factor of each child and an array `s` representing the size of each cookie, assign each cookie to a child such that each child gets at most one cookie and the cookie is large enough to satisfy the child's greed. Return the maximum number of children you can satisfy. This problem can be solved using a greedy algorithm by sorting both arrays and using a two-pointer technique.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Maximum Length of Pair Chain](https://leetcode.com/problems/maximum-length-of-pair-chain/)
+- **[meduim]** [Maximum Length of Pair Chain](https://leetcode.com/problems/maximum-length-of-pair-chain/)
 
 You are given an array of `n` pairs `pairs` where `pairs[i] = [lefti, righti]` and `lefti < righti`. A pair `p2 = [c, d]` follows a pair `p1 = [a, b]` if and only if `b < c`. A chain of pairs can be formed in this fashion. Return the length of the longest chain which can be formed. This problem is a direct application of the activity selection problem and can be solved using a greedy algorithm by sorting the pairs based on their end times and selecting the maximum number of non-overlapping pairs.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/)
+- **[hard]** [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/)
 
 We have `n` jobs, where each job is scheduled to be done from `startTime[i]` to `endTime[i]`, obtaining a profit of `profit[i]`. You're given the `startTime`, `endTime`, and `profit` arrays, return the maximum profit you can take such that there are no two jobs in the subset with overlapping time range. This problem extends the activity selection problem by introducing profits and requires a more advanced approach, such as dynamic programming combined with binary search, to find the optimal solution.
 
@@ -494,17 +496,17 @@ This code counts each character's frequency, then sorts the characters by descen
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)
+- **[easy]** [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)
   Given a string `s`, sort it in decreasing order based on the frequency of the characters. Return the sorted string. You can assume that the string only contains ASCII characters.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)
+- **[meduim]** [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)
   Given an array of strings `words` and an integer `k`, return the `k` most frequent strings. The answer should be sorted by frequency from highest to lowest. If multiple words have the same frequency, sort them alphabetically.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Rearrange String k Distance Apart](https://leetcode.com/problems/rearrange-string-k-distance-apart/)
+- **[hard]** [Rearrange String k Distance Apart](https://leetcode.com/problems/rearrange-string-k-distance-apart/)
   Given a string `s` and an integer `k`, rearrange the string such that the same characters are at least distance `k` from each other. If it's not possible, return an empty string. All characters are assumed to be lowercase English letters.
 
 ---
@@ -627,17 +629,17 @@ This implementation builds the Huffman tree based on character frequencies and t
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/)
+- **[easy]** [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/)
   Design a tiny URL service to encode a long URL to a short one and decode it back to the original URL. While it's not Huffman coding directly, the principles of encoding and decoding map closely to simplified coding tree logic.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Design File System](https://leetcode.com/problems/design-file-system/)
+- **[meduim]** [Design File System](https://leetcode.com/problems/design-file-system/)
   Design a file system that supports creating new paths and retrieving values. Concepts like prefix trees and efficient path encoding are fundamental, and similar tree-based structure logic is applied in Huffman encoding.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Optimal Account Balancing](https://leetcode.com/problems/optimal-account-balancing/)
+- **[hard]** [Optimal Account Balancing](https://leetcode.com/problems/optimal-account-balancing/)
   Given a list of transactions between people, minimize the number of transactions to settle debt. This problem requires optimal merging and balancing strategies, which have algorithmic similarity to constructing minimal-cost trees like Huffman Trees.
 
 ---
@@ -727,17 +729,17 @@ This implementation first sorts the items by their value-to-weight ratio and the
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/)
+- **[easy]** [Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/)
   You are given the number of boxes of different types, each with a certain number of units per box. You need to load boxes onto a truck to maximize the total number of units without exceeding the truck size. This is a direct application of the fractional knapsack greedy approach.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/)
+- **[meduim]** [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/)
   Given an initial power and a bag of tokens with different values, you may play tokens face up or face down to maximize your score. The decision to play tokens optimally resembles the greedy ratio-based selection in the fractional knapsack.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [IPO](https://leetcode.com/problems/ipo/)
+- **[hard]** [IPO](https://leetcode.com/problems/ipo/)
   Given capital and a list of projects each with a profit and a required capital, you must choose at most `k` projects to maximize your final capital. This problem requires sorting and greedily selecting projects, similar to selecting items in the fractional knapsack by profit-to-capital ratio.
 
 ---
@@ -758,19 +760,19 @@ anyway the most important thing is not the material but silving problems on it s
 
 ## Problems on _Stagecoach_
 
-- \_ <p style="color: green; display: inline;">easy</p> [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
+- **[easy]** [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
 
 You are given a m x n grid filled with non-negative numbers. Your task is to find a path from the top-left corner to the bottom-right corner such that the sum of the numbers along the path is minimized. You are allowed to move only right or down at any point. This problem represents the simplest stage-based path optimization using dynamic programming.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Triangle](https://leetcode.com/problems/triangle/)
+- **[meduim]** [Triangle](https://leetcode.com/problems/triangle/)
 
 Given a triangle array, find the minimum path sum from top to bottom. At each step, you may move to adjacent numbers on the row below. The triangle shape adds variation in movement and forces you to decide between multiple adjacent options, making it a more complex but classic DP problem connected to stagecoach models.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
+- **[hard]** [Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
 
 You are given a grid with arrows indicating the direction of movement allowed in each cell. Changing the direction of a cell costs 1. Your task is to modify as few cells as possible to create at least one valid path from the top-left to the bottom-right corner. This problem mixes grid DP with BFS techniques and variable movement costs, representing an advanced level of stage-based dynamic programming.
 
@@ -778,19 +780,19 @@ You are given a grid with arrows indicating the direction of movement allowed in
 
 ## Problems on _Longest Common Subsequence_
 
-- \_ <p style="color: green; display: inline;">easy</p> [Longest Common Subsequence Between Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/)
+- **[easy]** [Longest Common Subsequence Between Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/)
 
 Given two strings word1 and word2, return the minimum number of steps required to make word1 and word2 the same. In one step, you can delete exactly one character in either string. This problem is a simplified application of the longest common subsequence idea, framed in terms of deletions, making it more approachable while still using the classic LCS dynamic programming table.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+- **[meduim]** [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 
 Given two strings text1 and text2, return the length of their longest common subsequence. A subsequence is a sequence derived by deleting some or no characters without changing the order of the remaining characters. This is the textbook LCS problem, using dynamic programming with a 2D table to track common subsequences as you iterate through both strings.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Edit Distance](https://leetcode.com/problems/edit-distance/)
+- **[hard]** [Edit Distance](https://leetcode.com/problems/edit-distance/)
 
 Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2. You may perform insertions, deletions, or substitutions. This is a more complex extension of the LCS concept, where you track multiple operations and compute minimal edit paths using dynamic programming, making it one of the harder problems in this category.
 
@@ -798,19 +800,19 @@ Given two strings word1 and word2, return the minimum number of operations requi
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Last Stone Weight II](https://leetcode.com/problems/last-stone-weight-ii/)
+- **[easy]** [Last Stone Weight II](https://leetcode.com/problems/last-stone-weight-ii/)
 
 You are given an array of stones where each stone has a positive integer weight. In each turn, you choose any two stones and smash them together. The goal is to minimize the weight of the last remaining stone (or end with zero if possible). This is an easy-level problem that reduces to a subset-sum variation, which directly maps to the 0/1 knapsack dynamic programming structure.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
+- **[meduim]** [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
 
 Given a non-empty array containing only positive integers, determine if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal. This is a standard medium-level problem that applies 0/1 knapsack dynamic programming by trying to find a subset with a target sum, using a DP array to track achievable sums.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/)
+- **[hard]** [Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/)
 
 Given an array of binary strings and two integers m and n, return the size of the largest subset such that there are at most m 0's and n 1's in the subset. This is a classic hard-level 0/1 knapsack problem but extended to two dimensions, requiring careful DP state management over both zero and one counts, which makes it considerably more challenging.
 
@@ -944,19 +946,19 @@ This example is practical for small to medium-sized graphs and is easily adaptab
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Optimize Water Distribution in a Village](https://leetcode.com/problems/optimize-water-distribution-in-a-village/)
+- **[easy]** [Optimize Water Distribution in a Village](https://leetcode.com/problems/optimize-water-distribution-in-a-village/)
 
 There are n houses in a village, and you want to supply water to all houses. You can either build a well in each house or connect the house to another house with a pipe. The cost to build wells and lay pipes is given. Find the minimum total cost to supply water to all houses. This is an easy application of Prim's algorithm where the graph includes virtual edges (wells) and you build the minimum spanning tree considering both direct and indirect connections.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/)
+- **[meduim]** [Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/)
 
 You are given the cost of connecting every pair of cities. Your task is to connect all cities with minimum total cost. A connection is bidirectional, and you can only connect directly or indirectly. This problem is a direct application of Prim's or Kruskal's algorithm to build the minimum spanning tree that connects all cities at minimal cost.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+- **[hard]** [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 
 Given an array of points in a 2D plane, return the minimum cost to make all points connected. The cost to connect two points is the Manhattan distance between them. This is a hard version of the MST problem where you must compute pairwise costs and then apply Prim’s algorithm (or Kruskal's) efficiently over potentially large input sizes, making it computationally heavier.
 
@@ -1052,19 +1054,19 @@ This structure works well for unweighted graphs. If you want, I can also show yo
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+- **[easy]** [Number of Islands](https://leetcode.com/problems/number-of-islands/)
 
 Given a 2D grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You can use BFS to traverse each island and mark the visited land, making this one of the most famous easy BFS grid traversal problems.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Perfect Squares](https://leetcode.com/problems/perfect-squares/)
+- **[meduim]** [Perfect Squares](https://leetcode.com/problems/perfect-squares/)
 
 Given an integer n, return the least number of perfect square numbers which sum to n. You can think of this as a graph where each node represents a number, and edges represent subtracting a square number. BFS is used here to find the shortest path (minimum number of perfect squares), making it a solid medium-level application of BFS beyond grids.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/)
+- **[hard]** [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/)
 
 You are given a 2D grid where each cell has a tree with a certain height, and you must cut them in increasing order of height starting from (0,0). You can only move in four directions and cannot pass through obstacles. This problem requires repeated BFS calls to compute minimal paths between trees while handling obstacles and order constraints, making it a challenging graph traversal task.
 
@@ -1156,19 +1158,19 @@ This recursive DFS is practical and clean for small and medium graphs. If desire
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+- **[easy]** [Number of Islands](https://leetcode.com/problems/number-of-islands/)
 
 Given a 2D grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You can use BFS to traverse each island and mark the visited land, making this one of the most famous easy BFS grid traversal problems.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Perfect Squares](https://leetcode.com/problems/perfect-squares/)
+- **[meduim]** [Perfect Squares](https://leetcode.com/problems/perfect-squares/)
 
 Given an integer n, return the least number of perfect square numbers which sum to n. You can think of this as a graph where each node represents a number, and edges represent subtracting a square number. BFS is used here to find the shortest path (minimum number of perfect squares), making it a solid medium-level application of BFS beyond grids.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/)
+- **[hard]** [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/)
 
 You are given a 2D grid where each cell has a tree with a certain height, and you must cut them in increasing order of height starting from (0,0). You can only move in four directions and cannot pass through obstacles. This problem requires repeated BFS calls to compute minimal paths between trees while handling obstacles and order constraints, making it a challenging graph traversal task.
 
@@ -1298,19 +1300,19 @@ This implementation is efficient for smaller graphs. For large graphs, a priorit
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+- **[easy]** [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
 
 You are given a network of n nodes, labeled from 1 to n. You are also given times, a list of travel times as directed edges times\[i] = (ui, vi, wi), where ui is the source node, vi is the target node, and wi is the time it takes for a signal to travel from source to target. We will send a signal from a given node k. This problem can be solved using Dijkstra's algorithm to find the shortest time for all nodes to receive the signal.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+- **[meduim]** [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 
 There are n cities connected by some number of flights. You are given an array flights where flights\[i] = \[fromi, toi, pricei] indicates that there is a flight from city fromi to city toi with cost pricei. You are also given three integers src, dst, and k, return the cheapest price from src to dst with at most k stops. This problem can be approached using a modified version of Dijkstra's algorithm to account for the number of stops.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Second Minimum Time to Reach Destination](https://leetcode.com/problems/second-minimum-time-to-reach-destination/)
+- **[hard]** [Second Minimum Time to Reach Destination](https://leetcode.com/problems/second-minimum-time-to-reach-destination/)
 
 You are given a graph where each edge has two weights: the first is the normal time, and the second is the second shortest time. You need to find the second minimum time to reach the destination. This problem requires an advanced understanding of Dijkstra's algorithm to handle multiple edge weights and find the second shortest path.
 
@@ -1387,19 +1389,19 @@ Arrays are the foundation for many algorithms and problems in coding interviews.
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Two Sum](https://leetcode.com/problems/two-sum/)
+- **[easy]** [Two Sum](https://leetcode.com/problems/two-sum/)
 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [3Sum](https://leetcode.com/problems/3sum/)
+- **[meduim]** [3Sum](https://leetcode.com/problems/3sum/)
 
 Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`. The solution set must not contain duplicate triplets.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+- **[hard]** [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
 
 Given an unsorted integer array `nums`, return the smallest missing positive integer. You must implement an algorithm that runs in `O(n)` time and uses constant extra space.
 
@@ -1457,19 +1459,19 @@ Linked lists come in several types: singly linked lists, doubly linked lists (wh
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+- **[easy]** [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
 
 Given the head of a singly linked list, reverse the list, and return the reversed list.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+- **[meduim]** [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
 
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each node contains a single digit. Add the two numbers and return the sum as a linked list.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+- **[hard]** [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 
 You are given an array of `k` linked-lists, each linked list is sorted in ascending order. Merge all the linked lists into one sorted linked list and return it.
 
@@ -1533,19 +1535,19 @@ This array-based stack is simple, efficient, and practical for most problems tha
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+- **[easy]** [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
 Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['`, and `']'`, determine if the input string is valid. An input string is valid if open brackets are closed by the same type of brackets and in the correct order.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+- **[meduim]** [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
 
 Given an array of integers `temperatures` representing the daily temperatures, return an array `answer` such that `answer[i]` is the number of days you have to wait after the `i-th` day to get a warmer temperature. If there is no future day for which this is possible, put `0` instead.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+- **[hard]** [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 
 Given an array of integers `heights` representing the histogram's bar height where the width of each bar is `1`, return the area of the largest rectangle in the histogram.
 
@@ -1627,19 +1629,19 @@ This structure avoids resizing issues found in arrays and is ideal when you need
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Implement Stack using Linked List](https://leetcode.com/problems/implement-stack-using-linked-list/)
+- **[easy]** [Implement Stack using Linked List](https://leetcode.com/problems/implement-stack-using-linked-list/)
 
 Design a stack using a singly linked list where you must support standard stack operations like `push`, `pop`, `top`, and `empty`.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/)
+- **[meduim]** [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/)
 
 Given the head of a linked list, remove every node that has a node with a greater value to its right. Return the modified linked list's head.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+- **[hard]** [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
 
 Given a linked list, reverse the nodes of a linked list `k` at a time and return its modified list. `k` is a positive integer, and if the number of nodes is not a multiple of `k`, the remaining nodes should remain as is.
 
@@ -1729,19 +1731,19 @@ This structure is ideal when you require dynamic size and efficient enqueue/dequ
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)
+- **[easy]** [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)
 
 Design your implementation of a circular queue. A circular queue is a linear data structure where the operations are performed based on FIFO and the last position is connected back to the first position to make a circle.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Design Front Middle Back Queue](https://leetcode.com/problems/design-front-middle-back-queue/)
+- **[meduim]** [Design Front Middle Back Queue](https://leetcode.com/problems/design-front-middle-back-queue/)
 
 Design a queue that supports adding and removing elements from the front, middle, and back. All operations should be efficient, and you may use linked list concepts to manage dynamic insertions.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Maximum Performance of a Team](https://leetcode.com/problems/maximum-performance-of-a-team/)
+- **[hard]** [Maximum Performance of a Team](https://leetcode.com/problems/maximum-performance-of-a-team/)
 
 You are given scores and speeds of engineers and must form a team with the maximum performance under certain constraints. The problem involves maintaining a dynamic group of selected engineers, which can be effectively modeled with a queue or heap structure.
 
@@ -1803,19 +1805,19 @@ This structure is practical and works well for most algorithm problems, especial
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+- **[easy]** [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 
 Implement a first in first out (FIFO) queue using only two stacks. Your implemented queue should support all standard queue operations (`push`, `pop`, `peek`, and `empty`).
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/)
+- **[meduim]** [Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/)
 
 You have a queue of incoming calls. Implement a system that counts the number of calls that happened in the past 3000 milliseconds, maintaining the FIFO nature of incoming events.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+- **[hard]** [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
 
 Given an array `nums` and a sliding window size `k`, return the maximum value in each sliding window of size `k`. This requires an efficient solution that avoids recomputing maximums from scratch for each window.
 
@@ -1887,19 +1889,19 @@ This structure is especially effective when you need fast lookups or need to cou
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Two Sum](https://leetcode.com/problems/two-sum/)
+- **[easy]** [Two Sum](https://leetcode.com/problems/two-sum/)
 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to the target. You must solve it in `O(n)` using a dictionary for fast lookups.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+- **[meduim]** [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
 
 Given an array of integers `nums` and an integer `k`, return the total number of continuous subarrays whose sum equals to `k`. A hashmap is used to track cumulative sums efficiently.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)
+- **[hard]** [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)
 
 Given a list of unique words, find all pairs of distinct indices such that the concatenation of the two words forms a palindrome. A hashmap is used to check reversed strings in `O(1)` time.
 
@@ -1971,19 +1973,19 @@ This implementation provides an efficient way to store and retrieve key-value pa
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Two Sum](https://leetcode.com/problems/two-sum/description/)
+- **[easy]** [Two Sum](https://leetcode.com/problems/two-sum/description/)
 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+- **[meduim]** [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
 
 Given an array of integers `nums` and an integer `k`, return the total number of continuous subarrays whose sum equals to `k`. A subarray is a contiguous non-empty sequence of elements within an array.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/description/)
+- **[hard]** [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/description/)
 
 You are given an array of unique words. A palindrome pair is a pair of integers `(i, j)` such that:
 
@@ -2100,13 +2102,13 @@ This implementation provides basic methods for inserting values, searching for v
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/)
+- **[easy]** [Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/)
 
 Given the root of a binary search tree (BST) with duplicates, return all the mode(s) (i.e., the most frequently occurred element) in it. If the tree has more than one mode, return them in any order.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+- **[meduim]** [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
 
 Given the root of a binary tree, determine if it is a valid binary search tree (BST). A valid BST is defined as follows:
 
@@ -2116,7 +2118,7 @@ Given the root of a binary tree, determine if it is a valid binary search tree (
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+- **[hard]** [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 
 Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST. According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
 
@@ -2253,19 +2255,19 @@ This implementation ensures that the tree remains balanced after each insertion,
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+- **[easy]** [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
 
 Given a binary tree, determine if it is height-balanced. A height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differs by more than one.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/)
+- **[meduim]** [Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/)
 
 Given the root of a binary search tree, return a balanced binary search tree with the same node values. If there is more than one answer, return any of them.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
+- **[hard]** [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
 
 Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height-balanced binary search tree.
 
@@ -2404,19 +2406,19 @@ This implementation provides methods to insert elements, remove the root element
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
+- **[easy]** [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
 
 We have a collection of stones, each with a positive integer weight. Each turn, we choose the two heaviest stones and smash them together. If the stones are of equal weight, both are destroyed; if the stones have different weights, the smaller stone is destroyed, and the larger stone's weight is reduced by the smaller stone's weight. Return the weight of the last remaining stone or 0 if there are no stones left.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+- **[meduim]** [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
 Given an integer array `nums` and an integer `k`, return the kth largest element in the array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+- **[hard]** [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
 The problem is to design a data structure that supports the following two operations:
 
@@ -2531,19 +2533,19 @@ In this implementation, the `insert` method adds a new element to the heap, and 
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
+- **[easy]** [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
 
 We have a collection of stones, each with a positive integer weight. Each turn, we choose the two heaviest stones and smash them together. If the stones are of equal weight, both are destroyed; if the stones have different weights, the smaller stone is destroyed, and the larger stone's weight is reduced by the smaller stone's weight. Return the weight of the last remaining stone or 0 if there are no stones left.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+- **[meduim]** [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 
 Given a non-empty array of integers, return the k most frequent elements. Your answer should be sorted by frequency from highest to lowest. If two elements have the same frequency, sort them in descending order.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+- **[hard]** [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
 The problem is to design a data structure that supports the following two operations:
 
@@ -2696,19 +2698,19 @@ This implementation provides methods for inserting nodes while maintaining the A
 
 ## Problems
 
-- \_ <p style="color: green; display: inline;">easy</p> [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
+- **[easy]** [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
 
 Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height-balanced binary search tree.
 
 ---
 
-- \_ <p style="color: orange; display: inline;">medium</p> [Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/)
+- **[meduim]** [Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/)
 
 Given the root of a binary search tree, return a balanced binary search tree with the same node values. If there is more than one answer, return any of them.
 
 ---
 
-- \_ <p style="color: red; display: inline;">hard</p> [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+- **[hard]** [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
 
 Given an integer array nums, return an integer array counts where counts\[i] is the number of smaller elements to the right of nums\[i]. Implement this using a self-balancing binary search tree (AVL tree) for efficient querying.
 
