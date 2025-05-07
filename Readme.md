@@ -8,7 +8,8 @@ in this roadmap I will be following the [cloud native base camp](https://https:/
 
 I will not mention time complexity measurement as it is a fundamental and analytical part rather than a problem solving part
 
-If you like that thing consider following me on [linkedin](https://www.linkedin.com/in/kareem-anees-0496b62b3/)
+If you like that thing consider following me on linkedin [Kareem Anees](https://www.linkedin.com/in/kareem-anees-0496b62b3/)
+![alt text](image-40.png)
 
 # Algorithms
 
@@ -52,7 +53,7 @@ It is efficient for small datasets or nearly sorted arrays but performs poorly o
 
 Here is a practical TypeScript implementation of insertion sort:
 
-```typescript
+```
 function insertionSort(arr: number[]): number[] {
   for (let i = 1; i < arr.length; i++) {
     let key = arr[i];
@@ -127,7 +128,7 @@ For example, given the array `[38, 27, 43, 3, 9, 82, 10]`:
 
 Here is the TypeScript implementation of Merge Sort:
 
-```typescript
+```
 function mergeSort(arr: number[]): number[] {
   if (arr.length <= 1) {
     return arr;
@@ -210,7 +211,7 @@ If the target is `10`, the search would:
 
 Here is the TypeScript implementation of Binary Search:
 
-```typescript
+```
 function binarySearch(arr: number[], target: number): number {
   let left = 0;
   let right = arr.length - 1;
@@ -281,7 +282,7 @@ For example, given the array `[12, -7, -5, 70, -3, 15]`:
 
 Here is a TypeScript implementation of the Segregate Positive and Negative Numbers algorithm:
 
-```typescript
+```
 function segregatePositiveAndNegative(arr: number[]): number[] {
   let left = 0;
   let right = arr.length - 1;
@@ -369,7 +370,7 @@ Maximum selected activities: A1, A2, A4, A5.
 
 Here is a TypeScript implementation:
 
-```typescript
+```
 type Activity = {
   start: number;
   end: number;
@@ -465,7 +466,7 @@ For example, given the string `"programming"`:
 
 Here is a practical TypeScript implementation:
 
-```typescript
+```
 function sortedCharFrequencies(text: string): [string, number][] {
   const freqMap: Record<string, number> = {};
 
@@ -562,7 +563,7 @@ a: 5, b: 9, c: 12, d: 13, e: 16, f: 45
 
 Here is a practical TypeScript implementation:
 
-```typescript
+```
 type Node = {
   char?: string;
   freq: number;
@@ -681,7 +682,7 @@ Item 3: value = 120, weight = 30 → ratio = 4
 
 Here is a practical TypeScript implementation:
 
-```typescript
+```
 type Item = {
   value: number;
   weight: number;
@@ -866,7 +867,7 @@ Total MST weight = 1 (A-B) + 1 (B-C) + 2 (C-D) = 4
 
 ### TypeScript Example
 
-```typescript
+```
 type Edge = [number, number, number]; // [source, destination, weight]
 
 class Graph {
@@ -994,7 +995,7 @@ Traversal order will be: `0 → 1 → 2 → 3`
 
 ### TypeScript Example
 
-```typescript
+```
 class Graph {
   vertices: number;
   adjList: Map<number, number[]>;
@@ -1101,7 +1102,7 @@ Traversal order (depending on adjacency list order): `0 → 1 → 3 → 2`
 
 ### TypeScript Example
 
-```typescript
+```
 class Graph {
   vertices: number;
   adjList: Map<number, number[]>;
@@ -1205,7 +1206,7 @@ Shortest distances will be: `A -> B = 1`, `A -> C = 3`, `A -> D = 6`.
 
 ### TypeScript Example
 
-```typescript
+```
 class Graph {
   vertices: number;
   adjList: Map<number, { node: number; weight: number }[]>;
@@ -1348,7 +1349,7 @@ Arrays are widely used because of their simplicity and speed in random access. H
 
 Here is an example of array usage and manipulation in TypeScript:
 
-```typescript
+```
 // Declare an array of numbers
 let numbers: number[] = [1, 2, 3, 4, 5];
 
@@ -1418,7 +1419,7 @@ A linked list is a linear data structure where elements (called nodes) are store
 
 In TypeScript, a singly linked list can be implemented using classes:
 
-```typescript
+```
 class ListNode {
   val: number;
   next: ListNode | null;
@@ -1489,7 +1490,7 @@ Stacks are commonly used in algorithms that involve recursion, parsing, backtrac
 
 Here is how you can implement and use a stack using an array in TypeScript:
 
-```typescript
+```
 class Stack<T> {
   private items: T[] = [];
 
@@ -1566,7 +1567,7 @@ This makes `push` and `pop` operations efficient, both in `O(1)` time.
 
 Here’s an example of implementing a stack using a singly linked list in TypeScript:
 
-```typescript
+```
 class ListNode<T> {
   val: T;
   next: ListNode<T> | null;
@@ -1658,7 +1659,7 @@ A queue based on a linked list is a FIFO (First In First Out) structure where el
 
 Here’s an implementation in TypeScript using a singly linked list:
 
-```typescript
+```
 class ListNode<T> {
   val: T;
   next: ListNode<T> | null;
@@ -1759,7 +1760,7 @@ A queue is a linear data structure that follows the First In First Out (FIFO) pr
 
 Here is a simple and clear array-based queue implementation in TypeScript:
 
-```typescript
+```
 class Queue<T> {
   private items: T[] = [];
 
@@ -1834,7 +1835,7 @@ A key-value pair dictionary, commonly called a hashmap or object in TypeScript, 
 
 TypeScript’s `Record`, `Map`, or plain objects can be used for this. Here is an example using a `Map` for type safety and consistency:
 
-```typescript
+```
 class Dictionary<K, V> {
   private items: Map<K, V>;
 
@@ -1918,7 +1919,7 @@ A hash table is a data structure that maps keys to values for efficient lookup. 
 
 In TypeScript, a hash table can be implemented using the built-in `Map` object, which preserves the insertion order of keys and allows any type of key.
 
-```typescript
+```
 class HashTable<K, V> {
   private table: Map<K, V>;
 
@@ -2011,7 +2012,7 @@ This property allows for efficient searching, insertion, and deletion operations
 
 Here's an implementation of a simple BST in TypeScript:
 
-```typescript
+```
 class TreeNode {
   value: number;
   left: TreeNode | null;
@@ -2135,7 +2136,7 @@ One common type of balanced BST is the AVL tree, which automatically balances it
 
 Here's an implementation of a balanced BST (AVL Tree) in TypeScript:
 
-```typescript
+```
 class TreeNode {
   value: number;
   left: TreeNode | null = null;
@@ -2291,7 +2292,7 @@ Heaps are commonly implemented using arrays, where for a node at index `i`:
 
 Here's an implementation of a Min-Heap in TypeScript:
 
-```typescript
+```
 class MinHeap {
   private data: number[];
 
@@ -2427,7 +2428,7 @@ The problem is to design a data structure that supports the following two operat
 
 Implement the `MedianFinder` class:
 
-```typescript
+```
 class MedianFinder {
   constructor();
   insertNum(num: number): void;
@@ -2453,7 +2454,7 @@ These implementations allow for efficient insertion and removal operations, both
 
 Here's an example of a priority queue implementation in TypeScript using a max-heap:
 
-```typescript
+```
 class MaxHeap {
   private heap: number[] = [];
 
@@ -2554,7 +2555,7 @@ The problem is to design a data structure that supports the following two operat
 
 Implement the `MedianFinder` class:
 
-```typescript
+```
 class MedianFinder {
   constructor();
   insertNum(num: number): void;
@@ -2583,7 +2584,7 @@ An AVL tree is a self-balancing binary search tree (BST) where the difference in
 
 ### TypeScript Implementation
 
-```typescript
+```
 class AVLNode {
   value: number;
   left: AVLNode | null = null;
